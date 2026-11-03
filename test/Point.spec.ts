@@ -4,7 +4,7 @@ import Point from "../src/Point";
 describe("test Point", () => {
     it("test default constructor", () => {
         const p = new Point();
-        expect(p.getCoordinate()).to.equal(undefined);
+        expect(p.isEmpty()).to.equal(true);
         expect(Number.isNaN(p.x())).to.be.true;
         expect(Number.isNaN(p.y())).to.be.true;
     });
@@ -20,4 +20,12 @@ describe("test Point", () => {
         expect(p.getType()).to.equal("Point");
 
     });
+
+    it("test isEmpty", () => {
+        expect (new Point().isEmpty()).to.be.true;
+        expect (new Point([3.0,4.0]).isEmpty()).to.be.false;
+
+    });
+
+
 });

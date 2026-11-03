@@ -5,7 +5,7 @@ import LineString from "../src/LineString";
 describe("test LineString", () => {
     it("test default constructor", () => {
         const g = new LineString();
-        expect(g.getNumPoints()).to.equal(0);
+        expect(g.isEmpty()).to.equal(true);
 
     });
 
@@ -37,4 +37,5 @@ describe("test LineString", () => {
 
         expect(g.getPointN(2)).to.equal(undefined);
         });
+  
 });

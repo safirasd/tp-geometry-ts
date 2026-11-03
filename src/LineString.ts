@@ -8,7 +8,6 @@ export default class LineString implements Geometry{
     constructor(points?:Point[]){
         this.points = points ? points : [];
     }
-
     getType(): string {
         return "LineString";
     }
@@ -20,4 +19,10 @@ export default class LineString implements Geometry{
     getPointN(n: number) {
         return this.points[n]; 
     }
+
+    isEmpty(): boolean{
+        return this.points.length === 0 ;
+    } 
+    
+
 }
