@@ -37,5 +37,21 @@ describe("test LineString", () => {
 
         expect(g.getPointN(2)).to.equal(undefined);
         });
-  
+
+    it("test translate(dx, dy)", () => {
+        const g = new LineString([
+            new Point([2.0,5.0]), 
+            new Point([-5.0,1.0])
+        ]);
+        g.translate(-2.0, 5.0);
+
+        expect(g.getPointN(0).x()).to.equal(0.0);
+        expect(g.getPointN(0).y()).to.equal(10.0);
+
+        expect(g.getPointN(1).x()).to.equal(-7.0);
+        expect(g.getPointN(1).y()).to.equal(6.0);
+
+        expect(g.getPointN(2)).to.equal(undefined);
+
+    });
 });

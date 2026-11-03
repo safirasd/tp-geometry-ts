@@ -27,5 +27,12 @@ export default class Point implements Geometry{
   isEmpty(): boolean{
     return this.coordinate.length === 0;
   }
+
+  translate(dx:number, dy:number){
+    if(!this.isEmpty()) {
+      this.coordinate[0] += dx,
+      this.coordinate[1] += dy
+    } 
+  }
   
 }

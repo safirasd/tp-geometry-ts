@@ -21,11 +21,21 @@ describe("test Point", () => {
 
     });
 
-    it("test isEmpty", () => {
+    it("test isEmpty()", () => {
         expect (new Point().isEmpty()).to.be.true;
         expect (new Point([3.0,4.0]).isEmpty()).to.be.false;
 
     });
+
+    it("test translate(dx, dy)", () => {
+        const p = new Point([1.0,2.0]);
+        p.translate(2.0,6.0);
+        expect(p.getCoordinate()).to.deep.equal([3.0,8.0])
+
+    }
+
+
+    )
 
 
 });
