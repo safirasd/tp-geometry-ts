@@ -8,6 +8,14 @@ export default class Point implements Geometry{
     this.coordinate = coordinate ? coordinate : [];
   }
 
+  getType(): string{
+    return "Point";
+  }
+
+  isEmpty(): boolean{
+    return this.coordinate.length === 0;
+  }
+
   getCoordinate(): Coordinate {
     return this.coordinate;
   }
@@ -20,19 +28,14 @@ export default class Point implements Geometry{
     return this.isEmpty() ? Number.NaN : this.coordinate[1];
   }
 
-  getType(): string{
-    return "Point";
-  }
-
-  isEmpty(): boolean{
-    return this.coordinate.length === 0;
-  }
-
   translate(dx:number, dy:number){
     if(!this.isEmpty()) {
       this.coordinate[0] += dx,
       this.coordinate[1] += dy
-    } 
+    }}
+
+  clone(): Point{
+    return new Point([...this.coordinate]);
   }
   
 }
