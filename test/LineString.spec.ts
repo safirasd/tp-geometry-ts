@@ -89,6 +89,7 @@ describe("test LineString", () => {
    
     });
 
+
     it("test getEnvelope() with one empty Point on LineString", () => {
         const p7 = new Point([6.0,-3.0]);
         const p8 = new Point();
@@ -109,7 +110,6 @@ describe("test LineString", () => {
         const e = g.getEnvelope()
         expect(e.isEmpty()).to.be.true
         expect(e.toString()).to.equal("[]")
-   
     });
 
 })
