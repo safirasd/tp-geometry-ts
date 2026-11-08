@@ -18,9 +18,9 @@ export default class WktWriter{
             for (let i = 0; i < geometry.getNumPoints(); i++){
                 const p = geometry.getPointN(i)
                 if (i > 0){
-                     coords += "," ;
+                     coords += ","
                 }
-                coords += p.x().toFixed(1) + " " + p.y().toFixed(1);
+                coords += p.x().toFixed(1) + " " + p.y().toFixed(1)
             }
             return "LINESTRING(" + coords + ")";
         }else{
