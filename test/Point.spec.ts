@@ -46,14 +46,31 @@ describe("test Point", () => {
 
     it("test translation of the geometry copy", () => {
         const p = new Point([3.0,4.0])
-    
         p.translate(-2.0,1.0);
     
         const copy = p.clone();
-    
         expect (copy.getCoordinate()).to.deep.equal([1.0,5.0]);
     
     });
 
+    it("test getEnvelope() with point", () => {
+        const p = new Point([6.0,-3.0]);
+        const e = p.getEnvelope()
+
+        expect (e.getXmin()).to.equal(6.0);
+        expect (e.getYmin()).to.equal(-3.0);
+        expect (e.getXmax()).to.equal(6.0);
+        expect (e.getYmax()).to.equal(-3.0);
+
+        expect(e.toString()).to.deep.equal("[6,-3,6,-3]")
+    
+    });
+
+    it("test getEnvelope() with empty Point", () => {
+        const p = new Point();
+        const e = p.getEnvelope()
+        expect(e.isEmpty()).to.be.true
+        expect(e.toString()).to.equal("[]")
+        });
 
 });
