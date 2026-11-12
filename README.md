@@ -1,26 +1,12 @@
-# tp-geometry-ts
+# Librairie de création de géométries
+
+
+D'après le cours de *Design Pattern* de Michael Borne - [les patrons de conception](https://mborne.github.io/cours-patron-conception/). 
+
+Édité en novembre 2026
 
 ## Description
 
-Projet de démarrage pour le [TP - Patrons de conception avec des classes géométriques](https://mborne.github.io/architecture/patrons-conception/tp-geometry-ts/) associé au cours sur [les patrons de conception](https://mborne.github.io/cours-patron-conception/)
+Le travail a été réalisé dans le cadre du TP du cours Design Pattern du Master 2 Géomatique parcours TSI. 
 
-## Principes
-
-* La branche par défaut permet de récupérer un projet pour commencer à travailler
-* Les branches 0.1, 0.2, etc. correspondront aux réponses pour chaque question du TP
-* [Vitest](https://vitest.dev/) est utilisé pour l'écriture de tests unitaires
-
-## Utilisation
-
-```bash
-# installer les dépendances
-npm install
-# exécuter les tests
-npm run test
-# exécuter les tests en continu à chaque modification (mode watch)
-npx vitest
-# exécuter les tests avec rapport de couverture
-npm run coverage
-# pour visualiser le rapport de couverture
-firefox coverage/index.html
-```
+Les scripts ont été entièrement conçu en TypeScript avec des fichiers 
